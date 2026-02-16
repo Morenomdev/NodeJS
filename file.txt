@@ -1,2 +1,4 @@
+--start file1
 Hello World
 lorem ipsum
+--------------end file1
