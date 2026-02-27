@@ -1,0 +1,13 @@
+{
+	"dependencies": {
+		"18": "0.0.0",
+		"node": "18.20.8"
+	},
+	"devDependencies": {
+		"standard": "17.1.2"
+	},
+	"scripts": {
+		"lint": "standard",
+		"lint:fix": "standard --fix"
+	}
+}
