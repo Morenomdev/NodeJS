@@ -10,16 +10,33 @@ GET http://localhost:1234/movies?genre=Action
 ### Recuperar todas las peliculas por mas de 1 genero
 GET http://localhost:1234/movies?genre=Action&genre=Drama
 
-### Crear peliun POST
+### Crear pelicula POST
 POST http://localhost:1234/movies/
 Content-Type: application/json
 
 {
-  "title": "God Father",
+  "title": "Godfather",
   "year": 1975,
   "director": "Francis Ford Coppola",
   "duration": 175,
   "poster": "https://m.media-amazon.com/images/I/91Rc8cAmnAL._AC_UF1000,1000_QL80_.jpg",
-  "genre": ["Crime", "Drama"],
-  "rate": 8.8
+  "genre": ["Crime", "Drama"]
+}
+
+### Crear pelicula POST con error para probar validacion
+POST http://localhost:1234/movies/
+Content-Type: application/json
+
+{
+  "title": 1,
+  "year": "afeef",
+  "director": 3213223
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:1234/movies/b0dab676-7237-4089-9eea-6717e6a8c394
+Content-Type: application/josn
+
+{
+  "year": 1976
 }
