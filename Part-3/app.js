@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 app.get('/movies', (req, res) => {
   const { genre } = req.query
   console.log(genre)
+  console.log(genre)
   console.log(genre.length)
   if (genre.length > 1) {
     const filteredMovies = movies.filter(
